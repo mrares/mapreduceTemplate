@@ -62,7 +62,7 @@ public class hive2text {
 		Path inputDir = new Path(args[0]);
 		Path outputDir = new Path(args[1]);
 		
-		conf.setJobName("hive2seq");
+		conf.setJobName("hive2text");
 
 		conf.setInputFormat(SequenceFileInputFormat.class);
 
