@@ -1,4 +1,4 @@
-package org.mapreduce.examples;
+package org.mapreduce.examples.hive;
 
 import java.io.IOException;
 
@@ -16,6 +16,7 @@ import org.apache.hadoop.mapred.OutputCollector;
 import org.apache.hadoop.mapred.Reporter;
 import org.apache.hadoop.mapred.SequenceFileInputFormat;
 import org.apache.hadoop.mapred.TextOutputFormat;
+import org.mapreduce.examples.WordCount;
 
 import com.google.common.base.Splitter;
 
@@ -71,7 +72,7 @@ public class hive2text {
 		conf.setOutputValueClass(IntWritable.class);
 
 		conf.setMapperClass(RowMapper.class);
-
+		
 		FileInputFormat.setInputPaths(conf, inputDir);
 		FileOutputFormat.setOutputPath(conf, outputDir);
 
